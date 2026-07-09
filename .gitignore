@@ -56,3 +56,33 @@ reports/*.pdf
 
 # Keep empty directories
 !.gitkeep
+
+# Raw datasets - keep local only
+data/raw/*.zip
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.xls
+data/raw/*.txt
+
+# Extracted large raw files
+data/raw/extracted/
+data/raw/**/extracted/
+data/raw/**/*.csv
+data/raw/**/*.xlsx
+data/raw/**/*.xls
+data/raw/**/*.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db

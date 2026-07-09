@@ -58,7 +58,7 @@ The dashboard connects:
 - MetroPT-3 compressor sample
 - KPI calculations
 - Dashboard sheet with KPI cards and starter charts
-- AI recommendations placeholder
+- AI recommendations starter table
 - Assumptions and limitations
 
 ## Skills Demonstrated
@@ -109,7 +109,7 @@ Azure PdM, and Excel dashboard skeleton.
 - `python`
 - `portfolio-project`
 
-## Suggested Screenshot List To Add Later
+## Recommended Screenshot Checklist
 
 Save screenshots in `screenshots/` after the Excel workbook is visually
 reviewed:

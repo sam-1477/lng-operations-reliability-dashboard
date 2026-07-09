@@ -42,7 +42,8 @@ Your README.md is the first thing a reviewer sees. Structure it as:
 [MIT]
 
 ## Contact
-[Your LinkedIn, email]
+Samuel Talpa, B.Eng Mechanical Engineering
+GitHub: https://github.com/sam-1477/lng-operations-reliability-dashboard
 ```
 
 ### Repository Settings
@@ -73,7 +74,7 @@ Under a section called "Technical Projects" or "Engineering Portfolio" — NOT u
 
 ```
 LNG Operations Technical Reliability Dashboard          July 2026
-Personal Portfolio Project | github.com/[username]/lng-reliability-dashboard
+Personal Portfolio Project | https://github.com/sam-1477/lng-operations-reliability-dashboard
 
 * Built reliability analytics dashboard using Python (pandas, matplotlib, seaborn)
   analyzing publicly available industrial datasets adapted to LNG equipment context
@@ -133,7 +134,8 @@ What's in it:
 
 Built with: Python (pandas, matplotlib, seaborn), Jupyter, openpyxl
 
-Full source and documentation on GitHub: [link]
+Full source and documentation on GitHub:
+https://github.com/sam-1477/lng-operations-reliability-dashboard
 
 This is a portfolio project — it uses PUBLIC datasets adapted into LNG context.
 No ExxonMobil or PNG LNG data is used.

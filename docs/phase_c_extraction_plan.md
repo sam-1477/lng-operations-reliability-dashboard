@@ -151,7 +151,7 @@ data/
 5. Open `data/raw/extracted/azure_pdm/PdM_errors.csv` — 3,919 rows
 6. Open `data/raw/extracted/azure_pdm/PdM_maint.csv` — 3,286 rows
 
-**Skip in Excel, inspect in Python later:**
+**Skip in Excel, inspect with Python:**
 - `PdM_telemetry.csv` — 876,100 rows will crash Excel. Use Python.
 
 **Questions to answer:**
@@ -215,7 +215,7 @@ data/
 
 **Do NOT open in Excel.** It will freeze your laptop.
 
-**Instead, use a quick Python peek (we'll write a one-liner later):**
+**Instead, use the MetroPT-3 inspection script or a quick Python peek:**
 - 1,516,948 rows × 17 columns
 - Timestamp every 10 seconds from Feb–May 2020
 - Sensor columns: pressure, temperature, vibration, motor current, RPM-related

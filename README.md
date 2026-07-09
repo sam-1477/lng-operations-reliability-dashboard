@@ -86,7 +86,7 @@ attribution.
 |-- notebooks/               # Reserved for future notebook workflow
 |-- reports/                 # Generated reports and review documents
 |-- samples/                 # Small GitHub-safe sample files
-|-- screenshots/             # Dashboard screenshots to add later
+|-- screenshots/             # Dashboard screenshots for portfolio images
 |-- scripts/                 # Reproducible Python scripts
 |-- src/                     # Reserved for reusable Python modules
 |-- README.md
@@ -117,6 +117,16 @@ python scripts\build_excel_dashboard_skeleton.py
 
 The scripts read from processed/sample files or local raw files under
 `data/raw/`. Raw files are not committed to Git.
+
+## Scripts Created
+
+| Script | Purpose |
+|---|---|
+| `scripts/inspect_azure_pdm.py` | Inspect Azure Predictive Maintenance source files and create profile/sample outputs |
+| `scripts/build_azure_reliability_summary.py` | Build the Azure machine reliability summary for dashboard use |
+| `scripts/inspect_metropt3_compressor.py` | Inspect MetroPT-3 compressor data and create profile/sample outputs |
+| `scripts/inspect_phmsa_incidents.py` | Inspect PHMSA LNG/Gas Transmission incidents and create the incident risk summary |
+| `scripts/build_excel_dashboard_skeleton.py` | Build the Excel dashboard skeleton workbook |
 
 ## How To Open The Excel Workbook
 

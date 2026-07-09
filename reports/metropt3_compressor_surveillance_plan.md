@@ -47,7 +47,7 @@ limits.
 
 ## Candidate Dashboard Metrics
 
-The following metrics can be built later from the profiled MetroPT-3 data:
+The following metrics can be built in future work from the profiled MetroPT-3 data:
 
 - Average motor current
 - Average oil temperature
@@ -61,7 +61,7 @@ The following metrics can be built later from the profiled MetroPT-3 data:
 - Low-pressure switch activation count
 - Pressure switch status count
 
-## Possible Simple Logic For Later Scripts
+## Possible Simple Logic For Future Scripts
 
 Beginner-friendly dashboard logic can start with transparent thresholds:
 
@@ -87,6 +87,6 @@ formal LNG plant alarm limits.
 - Sensor thresholds derived from this dataset are screening values only.
 - The dataset does not provide full maintenance work orders, production impact,
   or verified downtime records.
-- Later dashboard metrics should use phrases such as "surveillance estimate",
+- Future dashboard metrics should use phrases such as "surveillance estimate",
   "screening flag", and "adapted for LNG-style compressor surveillance" instead
   of claiming formal operating limits or production reliability results.

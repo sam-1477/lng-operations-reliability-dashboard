@@ -1,6 +1,6 @@
 # Azure Predictive Maintenance Data Profile
 
-This report profiles the public Microsoft Azure Predictive Maintenance dataset files found locally. The data is used as a public industrial reliability dataset and may be adapted into LNG-style reliability categories later in the project.
+This report profiles the public Microsoft Azure Predictive Maintenance dataset files found locally. The data is used as a public industrial reliability dataset and may be adapted into LNG-style reliability categories in future project work.
 
 No ExxonMobil, PNG LNG, confidential, proprietary, or licensee data is used in this profile.
 

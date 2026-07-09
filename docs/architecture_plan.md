@@ -1,7 +1,7 @@
 # LNG Operations Technical Reliability Dashboard
 ## Complete Project Architecture Plan
 
-**Author:** [Your Name], B.Eng Mechanical Engineering  
+**Author:** Samuel Talpa, B.Eng Mechanical Engineering  
 **Target Role:** ExxonMobil PNG Graduate Engineer — Operations Technical  
 **Date:** July 2026  
 **Repository:** `lng-reliability-dashboard`
@@ -585,8 +585,8 @@ Hermes will coordinate this workflow. Codex is the implementer; Hermes is the PM
 
 ```bash
 # Clone (after push)
-git clone https://github.com/YOUR_USERNAME/lng-reliability-dashboard.git
-cd lng-reliability-dashboard
+git clone https://github.com/sam-1477/lng-operations-reliability-dashboard.git
+cd lng-operations-reliability-dashboard
 
 # Setup
 python -m venv venv

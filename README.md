@@ -31,6 +31,48 @@ The project focuses on:
 - Mechanical integrity context
 - Excel dashboard communication for non-Python reviewers
 
+## Dashboard Preview
+
+### Dashboard Preview
+
+![Dashboard Preview](screenshots/dashboard_preview.png)
+
+### KPI Calculations
+
+![KPI Calculations](screenshots/kpi_calculations.png)
+
+### AI Recommendations
+
+![AI Recommendations](screenshots/ai_recommendations.png)
+
+## Quick Portfolio Summary
+
+- Uses public industrial datasets adapted into LNG-style reliability categories
+  for an operations technical reliability dashboard.
+- Builds an Azure Predictive Maintenance reliability summary with asset health
+  scores, maintenance priorities, and reliability-style estimates.
+- Uses the MetroPT-3 compressor sample to demonstrate LNG-style compressor
+  process surveillance concepts.
+- Uses PHMSA LNG and Gas Transmission incident data for incident risk awareness,
+  cause review, and mechanical integrity context.
+- Provides an Excel dashboard workbook for quick visual review:
+  [excel/lng_operations_reliability_dashboard.xlsx](excel/lng_operations_reliability_dashboard.xlsx).
+- Remains a portfolio demonstration, not ExxonMobil or PNG LNG operating data,
+  not a live plant dashboard, and not a formal mechanical integrity assessment.
+
+## How To Review This Project
+
+For a quick recruiter or reviewer pass, open these files in order:
+
+1. [README.md](README.md) - project purpose, screenshots, data sources, and
+   limitations.
+2. [excel/lng_operations_reliability_dashboard.xlsx](excel/lng_operations_reliability_dashboard.xlsx)
+   - Excel dashboard skeleton with KPI cards, starter charts, and assumptions.
+3. [reports/project_progress_summary.md](reports/project_progress_summary.md) -
+   completed work and remaining portfolio steps.
+4. [reports/version_1_release_notes.md](reports/version_1_release_notes.md) -
+   release contents, known limitations, and v0.2 roadmap.
+
 ## Why This Project Matters
 
 LNG Operations Technical support requires engineers to understand equipment
@@ -202,17 +244,11 @@ Remaining before final Version 1 presentation:
 See [docs/assumptions_and_limitations.md](docs/assumptions_and_limitations.md)
 for the full honesty document.
 
-## Suggested Screenshots
+## Screenshot Index
 
-Screenshots will be added after the workbook is visually reviewed. Planned
-screenshots:
-
-- Dashboard overview
-- Azure asset health by equipment category
-- Maintenance priority count
-- PHMSA incident trends
-- MetroPT-3 compressor trend
-- Assumptions sheet
+- [Dashboard preview](screenshots/dashboard_preview.png)
+- [KPI calculations](screenshots/kpi_calculations.png)
+- [AI recommendations](screenshots/ai_recommendations.png)
 
 ## Next Steps
 

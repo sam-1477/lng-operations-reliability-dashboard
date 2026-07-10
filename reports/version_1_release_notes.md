@@ -30,6 +30,7 @@ assessment.
 - GitHub, CV, and LinkedIn presentation guidance
 - GitHub-safe sample files
 - Project progress summary and review checklist
+- Dashboard screenshots for quick reviewer inspection
 
 ## Public Datasets Used
 
@@ -87,7 +88,7 @@ Sample folders:
 - MTBF-style, MTTR-style, and availability-style metrics are estimates for
   portfolio learning.
 - PHMSA output is a risk-awareness summary, not a formal integrity assessment.
-- Manual Excel polish and screenshots remain before public portfolio release.
+- Manual Excel polish remains before a more refined public portfolio release.
 
 ## What Remains For v0.2
 
@@ -95,8 +96,7 @@ Sample folders:
 - Add slicers for maintenance priority, LNG equipment category, source dataset,
   and year.
 - Add or refine charts for compressor oil temperature and pressure trends.
-- Capture screenshots and add them to `screenshots/`.
-- Add screenshots to README.
+- Add more screenshots if the workbook layout changes.
 - Consider a small automated workbook QA script.
 - Add optional chart export workflow for portfolio images.
 - Refine AI recommendation wording after reviewing dashboard results.

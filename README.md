@@ -73,6 +73,9 @@ For a quick recruiter or reviewer pass, open these files in order:
 4. [reports/version_1_release_notes.md](reports/version_1_release_notes.md) -
    release contents, known limitations, and v0.2 roadmap.
 
+For a shorter review path, see
+[docs/reviewer_quick_start.md](docs/reviewer_quick_start.md).
+
 ## Why This Project Matters
 
 LNG Operations Technical support requires engineers to understand equipment
@@ -159,6 +162,11 @@ python scripts\build_excel_dashboard_skeleton.py
 
 The scripts read from processed/sample files or local raw files under
 `data/raw/`. Raw files are not committed to Git.
+
+Raw datasets are intentionally excluded from GitHub. The repository provides
+processed dashboard-ready files in `data/processed/` and GitHub-safe samples in
+`samples/` so reviewers can inspect the project without downloading large raw
+datasets.
 
 ## Scripts Created
 

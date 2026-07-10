@@ -7,6 +7,21 @@ LNG-style reliability categories for portfolio demonstration.
 The project is not ExxonMobil or PNG LNG operating data. It does not contain
 confidential, proprietary, or licensee data.
 
+## Current Status
+
+The Version 0.1 dashboard skeleton is complete and has been pushed to GitHub.
+The repository now contains processed dashboard-ready data, GitHub-safe samples,
+an Excel workbook skeleton, dashboard screenshots, scripts, and public-facing
+documentation.
+
+The workbook is available at:
+
+`excel/lng_operations_reliability_dashboard.xlsx`
+
+Screenshots are available in:
+
+`screenshots/`
+
 ## Completed So Far
 
 - Repository structure created for `docs/`, `data/`, `reports/`, `samples/`,
@@ -22,17 +37,22 @@ confidential, proprietary, or licensee data.
   surveillance.
 - PHMSA LNG and Gas Transmission incident datasets inspected.
 - PHMSA incident risk-awareness summary created for dashboard use.
+- Public datasets processed into dashboard-ready files under `data/processed/`.
 - GitHub-safe sample files created under `samples/`.
 - Data profile and summary reports created under `reports/`.
+- Excel dashboard skeleton created under `excel/`.
+- Dashboard screenshots created under `screenshots/`.
+- README updated with screenshots, review path, limitations, and workbook link.
+- Repository pushed to GitHub for portfolio review.
 
-## Public Datasets Downloaded And Inspected
+## Public Datasets Downloaded, Inspected, And Processed
 
-| Dataset | Local Raw/Extracted Location | Status |
+| Dataset | Local Raw/Extracted Location | Current Status |
 |---|---|---|
-| Azure Predictive Maintenance | `data/raw/extracted/azure_pdm/` | Inspected and processed |
-| MetroPT-3 Compressor | `data/raw/extracted/metropt3/` | Inspected and documented |
-| PHMSA LNG Incidents | `data/raw/extracted/phmsa_lng/` | Inspected and sampled |
-| PHMSA Gas Transmission Incidents | `data/raw/extracted/phmsa_gas_transmission/` | Inspected and processed into risk summary |
+| Azure Predictive Maintenance | `data/raw/extracted/azure_pdm/` | Inspected and processed into `data/processed/azure_machine_reliability_summary.csv` |
+| MetroPT-3 Compressor | `data/raw/extracted/metropt3/` | Inspected, documented, and sampled into `samples/metropt3/metropt3_compressor_sample.csv` |
+| PHMSA LNG Incidents | `data/raw/extracted/phmsa_lng/` | Inspected and sampled into `samples/phmsa/phmsa_lng_incident_sample.csv` |
+| PHMSA Gas Transmission Incidents | `data/raw/extracted/phmsa_gas_transmission/` | Inspected, sampled, and processed into `data/processed/phmsa_incident_risk_summary.csv` |
 
 ## Scripts Created
 
@@ -42,6 +62,7 @@ confidential, proprietary, or licensee data.
 | `scripts/build_azure_reliability_summary.py` | Builds `data/processed/azure_machine_reliability_summary.csv` |
 | `scripts/inspect_metropt3_compressor.py` | Profiles MetroPT-3 compressor data and creates report/sample outputs |
 | `scripts/inspect_phmsa_incidents.py` | Profiles PHMSA LNG and Gas Transmission data, creates samples, and builds incident risk summary |
+| `scripts/build_excel_dashboard_skeleton.py` | Builds `excel/lng_operations_reliability_dashboard.xlsx` |
 
 ## Dashboard-Ready Processed Files
 
@@ -58,6 +79,15 @@ confidential, proprietary, or licensee data.
 | `samples/metropt3/` | MetroPT-3 compressor sample capped at 1,000 rows |
 | `samples/phmsa/` | PHMSA LNG and Gas Transmission incident samples capped where applicable |
 
+## Excel Workbook And Screenshots
+
+| Artifact | Purpose |
+|---|---|
+| `excel/lng_operations_reliability_dashboard.xlsx` | Excel dashboard skeleton with data sheets, KPI calculations, dashboard, AI recommendations, and assumptions |
+| `screenshots/dashboard_preview.png` | Quick view of the main dashboard sheet |
+| `screenshots/kpi_calculations.png` | Quick view of the KPI calculations sheet |
+| `screenshots/ai_recommendations.png` | Quick view of the AI recommendations starter table |
+
 ## Reports Created
 
 | Report | Purpose |
@@ -68,22 +98,23 @@ confidential, proprietary, or licensee data.
 | `reports/metropt3_compressor_surveillance_plan.md` | MetroPT-3 compressor dashboard planning |
 | `reports/phmsa_incident_data_profile.md` | PHMSA source data profile |
 | `reports/phmsa_incident_risk_summary_report.md` | PHMSA risk-awareness summary explanation |
+| `reports/excel_dashboard_build_report.md` | Excel workbook build summary |
 | `reports/project_progress_summary.md` | Current project status and next steps |
+| `reports/version_1_release_notes.md` | Version 0.1 release notes |
+| `reports/repo_quality_review.md` | Repository quality review |
+| `reports/recruiter_review_notes.md` | Recruiter/reviewer navigation guide |
 
-## Remaining Work Before GitHub, LinkedIn, Or CV Showcase
+## Remaining Work Before Wider Recruiter Sharing
 
-1. Build `excel/lng_operations_reliability_dashboard.xlsx`.
-2. Import processed and sample files into Excel tables.
-3. Create KPI calculations and Pivot Tables.
-4. Build the main `Dashboard` sheet with KPI cards, slicers, and charts.
-5. Add `README`, `Assumptions`, and optional `AI_Recommendations` sheets.
-6. Capture dashboard screenshots for `screenshots/`.
-7. Review README and docs for consistent honesty wording.
-8. Run all scripts from a clean terminal to confirm reproducibility.
-9. Confirm no raw files are staged with `git status --short`.
-10. Commit processed files, samples, reports, scripts, and docs.
-11. Push to GitHub.
-12. Add a concise project entry to CV and LinkedIn.
+1. Open `excel/lng_operations_reliability_dashboard.xlsx` in Microsoft Excel and
+   confirm there are no repair warnings.
+2. Review chart placement and visual spacing in the workbook.
+3. Confirm screenshots are visible on GitHub.
+4. Confirm `git status --short data\raw` shows no raw-data changes.
+5. Optionally add Excel slicers for maintenance priority, equipment category,
+   source dataset, and year.
+6. Share the GitHub repository link with CV or LinkedIn only after final visual
+   review.
 
 ## Honest CV / LinkedIn Project Description
 
@@ -92,11 +123,14 @@ Excel with public industrial datasets adapted into LNG-style reliability
 categories. Processed Azure Predictive Maintenance data into asset health and
 maintenance-priority summaries, profiled MetroPT-3 compressor data for
 process-surveillance trends, and summarized public PHMSA LNG and Gas
-Transmission incident data for risk awareness. This is a portfolio demonstration
-and is not ExxonMobil or PNG LNG operating data.
+Transmission incident data for risk awareness. Created an Excel dashboard
+skeleton and screenshots for portfolio review. This is a portfolio
+demonstration and is not ExxonMobil or PNG LNG operating data.
 
 ## Current Positioning
 
-The project is now ready for Excel dashboard construction. The core public-data
-inputs have been inspected, documented, sampled safely for GitHub, and converted
-into initial dashboard-ready processed files.
+The project is ready for controlled recruiter review as a Version 0.1 dashboard
+skeleton. The repo demonstrates public-data handling, reliability thinking,
+Excel dashboard communication, and transparent assumptions. It should be
+presented as a portfolio demonstration, not as a live plant dashboard or formal
+mechanical integrity assessment.

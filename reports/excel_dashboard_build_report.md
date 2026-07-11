@@ -5,7 +5,7 @@
 - Workbook: `excel/lng_operations_reliability_dashboard.xlsx`
 - Status: polished starter/skeleton workbook, not a live plant dashboard
 - Purpose: operations technical reliability dashboard portfolio demonstration
-- Visual polish: visible worksheet-level chart headings, dashboard title band, KPI cards, gridline visibility, KPI tables, and AI recommendation formatting were improved.
+- Visual polish: visible worksheet-level chart headings, dashboard title band, KPI cards, gridline visibility, KPI table readability, and AI recommendation formatting were improved.
 - Theme: professional red/navy/white/light-gray energy-sector dashboard theme.
 - Branding boundary: no ExxonMobil logos, trademarks, or official brand assets were used.
 
@@ -49,8 +49,9 @@ Dashboard visual polish was applied with a large navy title band, a subtitle, a 
 ## Formatting Improvements
 
 - `KPI_Calculations` uses plain-text formula guidance instead of broken `#REF!` references.
-- `KPI_Calculations` keeps current calculated values while applying a large title, red accent line, navy header row, white bold header text, light-gray calculation rows, borders, fixed widths, wrapped notes, and freeze panes.
-- `AI_Recommendations` uses a large title, red accent line, navy header row, white bold header text, text wrapping, row heights sized for wrapped text, requested column widths, and freeze panes below the header.
+- `KPI_Calculations` body text contrast was improved with dark gray normal table text while retaining the navy header row, white bold header text, red accent line, light-gray calculation rows, borders, fixed widths, wrapped notes, and freeze panes.
+- `AI_Recommendations` body text contrast was improved with dark gray finding, recommendation, and engineering rationale text while retaining the navy header row, white bold header text, red accent line, requested column widths, and freeze panes below the header.
+- `AI_Recommendations` row spacing was reduced while keeping wrapped text readable: title row 28, subtitle row 32, header row 24, and body rows 60.
 - The workbook opens on the `Dashboard` sheet and hides worksheet gridlines to reduce visual clutter.
 - Maintenance Priority bars were given distinct colors through separate chart series: Critical uses energy red and Medium uses muted gray.
 - Maintenance Priority chart axis count visibility was improved with a 0-based y-axis, visible 20-unit major ticks, numeric labels, and horizontal gridlines.

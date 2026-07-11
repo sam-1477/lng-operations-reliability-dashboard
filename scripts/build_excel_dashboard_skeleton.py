@@ -130,6 +130,11 @@ SECTION_FONT = Font(size=12, bold=True, color=WHITE)
 KPI_VALUE_FONT = Font(size=20, bold=True, color=DEEP_NAVY)
 CRITICAL_VALUE_FONT = Font(size=20, bold=True, color=ENERGY_RED)
 WARNING_FONT = Font(italic=True, color=ENERGY_RED)
+
+AI_RECOMMENDATIONS_TITLE_ROW_HEIGHT = 28
+AI_RECOMMENDATIONS_SUBTITLE_ROW_HEIGHT = 32
+AI_RECOMMENDATIONS_HEADER_ROW_HEIGHT = 24
+AI_RECOMMENDATIONS_BODY_ROW_HEIGHT = 60
 THIN_BORDER = Border(
     left=Side(style="thin", color=BORDER_GRAY),
     right=Side(style="thin", color=BORDER_GRAY),
@@ -585,8 +590,10 @@ def create_kpi_calculations_sheet(
     apply_header_style(ws, row_number=kpi_header_row, start_col=1, end_col=4)
     for row_number in range(kpi_header_row + 1, kpi_header_row + len(kpis) + 1):
         for col_number in range(1, 5):
-            ws.cell(row_number, col_number).fill = LIGHT_FILL
-            ws.cell(row_number, col_number).alignment = Alignment(
+            cell = ws.cell(row_number, col_number)
+            cell.fill = LIGHT_FILL
+            cell.font = BODY_FONT
+            cell.alignment = Alignment(
                 wrap_text=True,
                 vertical="top",
             )
@@ -1142,6 +1149,8 @@ def create_ai_recommendations_sheet(
         "Starter recommendation table for portfolio discussion. Review by a qualified engineer would be required before real use.",
         merge_to_column=4,
     )
+    ws.row_dimensions[1].height = AI_RECOMMENDATIONS_TITLE_ROW_HEIGHT
+    ws.row_dimensions[2].height = AI_RECOMMENDATIONS_SUBTITLE_ROW_HEIGHT
     apply_red_accent_line(ws, row_number=3, start_col=1, end_col=4)
 
     critical_count = int((azure["maintenance_priority"] == "Critical").sum())
@@ -1187,12 +1196,14 @@ def create_ai_recommendations_sheet(
     ws.column_dimensions["B"].width = 45
     ws.column_dimensions["C"].width = 55
     ws.column_dimensions["D"].width = 55
-    ws.row_dimensions[header_row].height = 28
+    ws.row_dimensions[header_row].height = AI_RECOMMENDATIONS_HEADER_ROW_HEIGHT
     for row_number in range(header_row + 1, ws.max_row + 1):
-        ws.row_dimensions[row_number].height = 86
+        ws.row_dimensions[row_number].height = AI_RECOMMENDATIONS_BODY_ROW_HEIGHT
         for col_number in range(1, 5):
-            ws.cell(row_number, col_number).fill = WHITE_FILL
-            ws.cell(row_number, col_number).alignment = Alignment(
+            cell = ws.cell(row_number, col_number)
+            cell.fill = WHITE_FILL
+            cell.font = BODY_FONT
+            cell.alignment = Alignment(
                 wrap_text=True,
                 vertical="top",
             )
@@ -1381,7 +1392,7 @@ def build_report(azure: pd.DataFrame, phmsa: pd.DataFrame, metropt3: pd.DataFram
             f"- Workbook: `{WORKBOOK_OUTPUT_PATH.relative_to(PROJECT_ROOT).as_posix()}`",
             "- Status: polished starter/skeleton workbook, not a live plant dashboard",
             "- Purpose: operations technical reliability dashboard portfolio demonstration",
-            "- Visual polish: visible worksheet-level chart headings, dashboard title band, KPI cards, gridline visibility, KPI tables, and AI recommendation formatting were improved.",
+            "- Visual polish: visible worksheet-level chart headings, dashboard title band, KPI cards, gridline visibility, KPI table readability, and AI recommendation formatting were improved.",
             "- Theme: professional red/navy/white/light-gray energy-sector dashboard theme.",
             "- Branding boundary: no ExxonMobil logos, trademarks, or official brand assets were used.",
             "",
@@ -1426,8 +1437,9 @@ def build_report(azure: pd.DataFrame, phmsa: pd.DataFrame, metropt3: pd.DataFram
             "## Formatting Improvements",
             "",
             "- `KPI_Calculations` uses plain-text formula guidance instead of broken `#REF!` references.",
-            "- `KPI_Calculations` keeps current calculated values while applying a large title, red accent line, navy header row, white bold header text, light-gray calculation rows, borders, fixed widths, wrapped notes, and freeze panes.",
-            "- `AI_Recommendations` uses a large title, red accent line, navy header row, white bold header text, text wrapping, row heights sized for wrapped text, requested column widths, and freeze panes below the header.",
+            "- `KPI_Calculations` body text contrast was improved with dark gray normal table text while retaining the navy header row, white bold header text, red accent line, light-gray calculation rows, borders, fixed widths, wrapped notes, and freeze panes.",
+            "- `AI_Recommendations` body text contrast was improved with dark gray finding, recommendation, and engineering rationale text while retaining the navy header row, white bold header text, red accent line, requested column widths, and freeze panes below the header.",
+            "- `AI_Recommendations` row spacing was reduced while keeping wrapped text readable: title row 28, subtitle row 32, header row 24, and body rows 60.",
             "- The workbook opens on the `Dashboard` sheet and hides worksheet gridlines to reduce visual clutter.",
             "- Maintenance Priority bars were given distinct colors through separate chart series: Critical uses energy red and Medium uses muted gray.",
             "- Maintenance Priority chart axis count visibility was improved with a 0-based y-axis, visible 20-unit major ticks, numeric labels, and horizontal gridlines.",

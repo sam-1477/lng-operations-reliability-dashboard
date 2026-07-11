@@ -1,0 +1,11 @@
+FailureModeID,FailureMode,FailureMechanism,FailureClass,TypicalRootCause,DataOrigin
+1,Bearing Failure,Fatigue and wear,Mechanical,Maintenance,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+2,Seal Leak,Wear and contamination,Mechanical,Maintenance,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+3,Overheating,Thermal overload,Process,Operation,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+4,Excessive Vibration,Imbalance and misalignment,Mechanical,Installation,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+5,Electrical Fault,Insulation breakdown,Electrical,Manufacturing,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+6,Corrosion,External or internal corrosion,Integrity,Environment,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+7,Erosion,Flow-assisted wear,Mechanical,Operation,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+8,Blockage,Restriction or fouling,Process,Operation,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+9,Control Failure,Instrument or control malfunction,Instrumentation,Maintenance,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels
+10,Other,Unknown or uncategorised,Other,Unknown,Generated/Mapped/Inferred lookup from Azure PdM failure codes and engineering labels

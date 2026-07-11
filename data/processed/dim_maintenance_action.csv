@@ -1,0 +1,11 @@
+ActionID,ActionDescription,ActionType,ActionCategory,DataOrigin
+1,Replace Bearing,Corrective,Mechanical,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+2,Replace Seal,Corrective,Mechanical,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+3,Realign Shaft,Corrective,Mechanical,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+4,Lubricate Component,Preventive,Lubrication,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+5,Inspect and Clean,Preventive,Inspection,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+6,Replace Electrical Component,Corrective,Electrical,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+7,Calibrate Instrument,Preventive,Instrumentation,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+8,Overhaul Equipment,Corrective,Mechanical,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+9,Repair Pipeline,Corrective,Pipeline,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels
+10,Condition Monitoring Inspection,Condition-Based,Inspection,Generated/Mapped/Inferred lookup from Azure PdM component codes and engineering labels

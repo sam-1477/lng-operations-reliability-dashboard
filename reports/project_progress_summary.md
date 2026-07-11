@@ -9,10 +9,13 @@ confidential, proprietary, or licensee data.
 
 ## Current Status
 
-The Version 0.1 dashboard skeleton is complete and has been pushed to GitHub.
-The repository now contains processed dashboard-ready data, GitHub-safe samples,
-an Excel workbook skeleton, dashboard screenshots, scripts, and public-facing
-documentation.
+Status: v0.1 recruiter-review version complete.
+
+The Version 0.1 dashboard skeleton has been visually polished, documented, and
+pushed to GitHub for controlled recruiter review. The repository now contains
+processed dashboard-ready data summaries, GitHub-safe samples, an Excel
+dashboard workbook, updated screenshots, reproducible Python scripts, and
+public-facing documentation.
 
 The workbook is available at:
 
@@ -27,6 +30,7 @@ Screenshots are available in:
 - Repository structure created for `docs/`, `data/`, `reports/`, `samples/`,
   `scripts/`, `excel/`, `notebooks/`, and supporting folders.
 - Raw public datasets downloaded locally under `data/raw/`.
+- Raw public datasets excluded from GitHub.
 - `.gitignore` configured to keep raw ZIP, raw CSV, raw text, raw Excel, and
   extracted raw files out of Git.
 - Azure Predictive Maintenance dataset inspected.
@@ -35,15 +39,16 @@ Screenshots are available in:
   and availability-style percent.
 - MetroPT-3 Compressor dataset inspected and documented for compressor process
   surveillance.
+- MetroPT-3 compressor sample and profile created.
 - PHMSA LNG and Gas Transmission incident datasets inspected.
 - PHMSA incident risk-awareness summary created for dashboard use.
 - Public datasets processed into dashboard-ready files under `data/processed/`.
 - GitHub-safe sample files created under `samples/`.
 - Data profile and summary reports created under `reports/`.
-- Excel dashboard skeleton created under `excel/`.
-- Dashboard screenshots created under `screenshots/`.
+- Excel dashboard workbook created and visually polished under `excel/`.
+- Dashboard screenshots updated under `screenshots/`.
 - README updated with screenshots, review path, limitations, and workbook link.
-- Repository pushed to GitHub for portfolio review.
+- GitHub repository pushed for portfolio review.
 
 ## Public Datasets Downloaded, Inspected, And Processed
 
@@ -104,17 +109,19 @@ Screenshots are available in:
 | `reports/repo_quality_review.md` | Repository quality review |
 | `reports/recruiter_review_notes.md` | Recruiter/reviewer navigation guide |
 
-## Remaining Work Before Wider Recruiter Sharing
+## Future v0.2 Improvements
 
-1. Open `excel/lng_operations_reliability_dashboard.xlsx` in Microsoft Excel and
-   confirm there are no repair warnings.
-2. Review chart placement and visual spacing in the workbook.
-3. Confirm screenshots are visible on GitHub.
-4. Confirm `git status --short data\raw` shows no raw-data changes.
-5. Optionally add Excel slicers for maintenance priority, equipment category,
-   source dataset, and year.
-6. Share the GitHub repository link with CV or LinkedIn only after final visual
-   review.
+The v0.1 recruiter-review version is complete. Future v0.2 improvements may
+include:
+
+1. Add Excel slicers for maintenance priority, LNG equipment category, source
+   dataset, and year.
+2. Add additional compressor trend charts for pressure, oil temperature, motor
+   current, and operating signals.
+3. Add workbook QA checks for sheet presence, missing references, row heights,
+   and key formatting expectations.
+4. Create a more compact executive summary for quick recruiter scanning.
+5. Continue confirming that raw datasets remain excluded from GitHub.
 
 ## Honest CV / LinkedIn Project Description
 
@@ -123,14 +130,14 @@ Excel with public industrial datasets adapted into LNG-style reliability
 categories. Processed Azure Predictive Maintenance data into asset health and
 maintenance-priority summaries, profiled MetroPT-3 compressor data for
 process-surveillance trends, and summarized public PHMSA LNG and Gas
-Transmission incident data for risk awareness. Created an Excel dashboard
-skeleton and screenshots for portfolio review. This is a portfolio
+Transmission incident data for risk awareness. Created a visually polished Excel
+dashboard workbook and screenshots for portfolio review. This is a portfolio
 demonstration and is not ExxonMobil or PNG LNG operating data.
 
 ## Current Positioning
 
-The project is ready for controlled recruiter review as a Version 0.1 dashboard
-skeleton. The repo demonstrates public-data handling, reliability thinking,
-Excel dashboard communication, and transparent assumptions. It should be
-presented as a portfolio demonstration, not as a live plant dashboard or formal
-mechanical integrity assessment.
+The project is ready for controlled recruiter review as the completed Version
+0.1 recruiter-review dashboard. The repo demonstrates public-data handling,
+reliability thinking, Excel dashboard communication, and transparent
+assumptions. It should be presented as a portfolio demonstration, not as a live
+plant dashboard or formal mechanical integrity assessment.

@@ -4,12 +4,15 @@
 
 `v0.1-dashboard-skeleton`
 
+Release status: complete recruiter-review version.
+
 ## Release Summary
 
-This release creates the first complete dashboard skeleton for the LNG
-Operations Technical Reliability Dashboard. It connects processed Azure
-Predictive Maintenance data, MetroPT-3 compressor sample data, and public PHMSA
-incident data into an Excel workbook and supporting documentation.
+This release completes the first recruiter-review version of the LNG Operations
+Technical Reliability Dashboard. It connects processed Azure Predictive
+Maintenance data, MetroPT-3 compressor sample data, and public PHMSA incident
+data into a visually polished Excel workbook, screenshots, reproducible scripts,
+and supporting documentation.
 
 This is a portfolio demonstration using public industrial datasets adapted into
 LNG-style reliability categories. It is not ExxonMobil or PNG LNG operating
@@ -18,13 +21,21 @@ assessment.
 
 ## What Is Included
 
+- Excel workbook: `excel/lng_operations_reliability_dashboard.xlsx`
+- Updated screenshots for the Dashboard, KPI Calculations, and AI
+  Recommendations sheets
+- Processed dashboard-ready CSVs under `data/processed/`
+- Sample public data extracts under `samples/`
+- Python scripts for inspection, processing, and workbook generation
+- Documentation and reports for data sources, assumptions, dashboard design,
+  recruiter review, and release notes
 - Azure Predictive Maintenance data profile
 - Azure machine reliability summary
 - MetroPT-3 compressor data profile
 - MetroPT-3 compressor surveillance plan
 - PHMSA LNG and Gas Transmission incident data profile
 - PHMSA incident risk-awareness summary
-- Excel dashboard skeleton
+- Excel dashboard workbook
 - Dashboard data model documentation
 - Excel dashboard design documentation
 - GitHub, CV, and LinkedIn presentation guidance
@@ -78,7 +89,10 @@ Sample folders:
 
 ## Known Limitations
 
-- The workbook is a dashboard starter/skeleton, not a final polished dashboard.
+- The workbook is a portfolio demonstration, not a live plant dashboard.
+- The workbook does not use live plant data.
+- The workbook is not a formal mechanical integrity assessment.
+- Public industrial datasets are adapted into LNG-style reliability categories.
 - No real-time plant data connection exists.
 - No CMMS, historian, SAP PM, PI System, or live operations system is connected.
 - Azure machines are public machine records mapped into LNG-style categories.
@@ -88,16 +102,17 @@ Sample folders:
 - MTBF-style, MTTR-style, and availability-style metrics are estimates for
   portfolio learning.
 - PHMSA output is a risk-awareness summary, not a formal integrity assessment.
-- Manual Excel polish remains before a more refined public portfolio release.
 
 ## What Remains For v0.2
 
-- Manually review and polish the Excel dashboard layout.
 - Add slicers for maintenance priority, LNG equipment category, source dataset,
   and year.
-- Add or refine charts for compressor oil temperature and pressure trends.
-- Add more screenshots if the workbook layout changes.
-- Consider a small automated workbook QA script.
+- Add additional compressor trend charts for oil temperature, pressure, motor
+  current, and operating signals.
+- Add workbook QA checks for sheet presence, missing references, row heights,
+  and key formatting expectations.
+- Create a more compact executive summary for quick recruiter scanning.
+- Add more screenshots if the workbook layout changes in v0.2.
 - Add optional chart export workflow for portfolio images.
 - Refine AI recommendation wording after reviewing dashboard results.
 - Run all scripts from a clean environment and document the exact workflow.

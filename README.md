@@ -202,7 +202,14 @@ data tables, assumptions, and guidance for manual Excel polish.
 
 ## Current Project Status
 
+**Status: v0.1 recruiter-review version complete**
+
 Current release: `v0.1-dashboard-skeleton`
+
+The repository is ready for recruiter review as a graduate Mechanical
+Engineering portfolio project. The Excel dashboard workbook, screenshots,
+processed dashboard-ready data summaries, Python scripts, and supporting
+documentation are available in the repository.
 
 Completed:
 
@@ -211,17 +218,20 @@ Completed:
 - Processed Azure reliability summary created
 - Processed PHMSA incident risk summary created
 - MetroPT-3 compressor sample created
-- Excel dashboard skeleton created
+- Excel dashboard workbook created and visually polished
+- Dashboard, KPI calculations, and AI recommendations screenshots updated
 - GitHub/CV/LinkedIn presentation docs created
+- Repository pushed to GitHub for controlled recruiter review
 
-Remaining before final Version 1 presentation:
+Possible v0.2 improvements:
 
-- Open and visually review the Excel workbook
-- Adjust dashboard chart placement and formatting manually if needed
-- Add slicers in Excel
-- Capture screenshots into `screenshots/`
-- Add screenshots to this README
-- Run all scripts from a clean terminal before final release
+- Add slicers for maintenance priority, LNG equipment category, source dataset,
+  and year.
+- Add additional compressor trend charts for pressure, oil temperature, current,
+  and operating signals.
+- Add workbook QA checks for sheet presence, missing references, and key
+  formatting expectations.
+- Create a more compact executive summary for quick recruiter scanning.
 
 ## Skills Demonstrated
 
@@ -260,14 +270,12 @@ for the full honesty document.
 
 ## Next Steps
 
-1. Review `excel/lng_operations_reliability_dashboard.xlsx` manually in Excel.
-2. Add slicers and polish chart placement.
-3. Capture dashboard screenshots.
-4. Add screenshots to the README.
-5. Commit documentation, processed files, sample files, scripts, reports, and the
-   workbook.
-6. Push to GitHub.
-7. Add a concise project description to CV and LinkedIn.
+1. Use the current `v0.1-dashboard-skeleton` release for recruiter review.
+2. Keep raw datasets excluded from GitHub.
+3. For v0.2, consider slicers, additional compressor trend charts, workbook QA
+   checks, and a more compact executive summary.
+4. Continue presenting the workbook as a portfolio demonstration using public
+   datasets, not ExxonMobil or PNG LNG operating data.
 
 ## Contact / Portfolio Note
 

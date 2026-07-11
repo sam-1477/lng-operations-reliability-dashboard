@@ -36,7 +36,9 @@ Your README.md is the first thing a reviewer sees. Structure it as:
 [Folder tree]
 
 ## Technologies Used
-[Python, pandas, matplotlib, seaborn, openpyxl, Jupyter, Git]
+[Python, pandas, matplotlib, seaborn, openpyxl, Jupyter, Excel, Power BI Desktop,
+Power Query, DAX, star-schema data model, interactive drill-through,
+report-page tooltips, Git]
 
 ## License
 [MIT]
@@ -50,7 +52,7 @@ GitHub: https://github.com/sam-1477/lng-operations-reliability-dashboard
 
 - **Visibility:** Public
 - **Topics/Tags:** `reliability-engineering` `lng` `predictive-maintenance` `pipeline-safety` `operations-technical` `portfolio-project`
-- **About:** "Portfolio project: LNG-style reliability dashboard using public industrial datasets. MTTR, MTBF, Availability KPIs. Python + Jupyter."
+- **About:** "Portfolio project: LNG-style reliability dashboard using public industrial datasets. MTTR, MTBF Estimate, Availability Estimate KPIs. Python, Jupyter, Excel, and Power BI."
 - **Include in profile:** Yes (pin this repo)
 
 ### Commit History
@@ -77,17 +79,22 @@ LNG Operations Technical Reliability Dashboard          July 2026
 Personal Portfolio Project | https://github.com/sam-1477/lng-operations-reliability-dashboard
 
 * Built reliability analytics dashboard using Python (pandas, matplotlib, seaborn)
-  analyzing publicly available industrial datasets adapted to LNG equipment context
+  and Power BI Desktop analyzing publicly available industrial datasets adapted
+  to LNG equipment context
 * Developed 30-asset register mapped to LNG equipment categories (compressors, turbines,
   pumps, pipelines, storage) with criticality ratings
-* Computed reliability KPIs (MTTR, MTBF-estimate, Availability-estimate) from maintenance
-  and failure records; generated risk-based maintenance priority matrix
+* Computed reliability KPIs (MTTR, MTBF Estimate, Availability Estimate) from
+  maintenance and failure records; generated a 0-100 risk-priority model and
+  secondary 5x5 likelihood-consequence matrix
 * Analyzed PHMSA pipeline incident data to identify root cause patterns relevant to
   LNG feed/product pipeline integrity
-* Implemented AI-assisted engineering analysis using LLM to generate failure mode
-  recommendations with appropriate caveats
+* Implemented risk-derived engineering recommendations with appropriate caveats,
+  including engineering review and authorised work-order requirements
 * Delivered Excel workbook for non-Python reviewers with embedded charts and conditional
   formatting
+* Designed Power BI star-schema data model with Power Query transformations, DAX
+  measures, interactive drill-through, report-page tooltips, Power BI screenshots,
+  and PBIX/PBIT portfolio delivery path
 ```
 
 ### Tailoring for ExxonMobil PNG
@@ -124,15 +131,17 @@ The goal: demonstrate reliability engineering thinking using only publicly
 available industrial datasets — no confidential data, no shortcuts.
 
 What's in it:
-• 30-asset register mapped to LNG equipment categories
-• Compressor condition monitoring (adapted from MetroPT-3 sensor data)
-• Pipeline incident risk analysis (from PHMSA regulatory data)
-• Reliability KPIs: MTTR, MTBF-estimate, Availability-estimate
-• Risk-based maintenance priority matrix
-• AI-assisted engineering recommendations
-• Full Excel workbook for non-Python reviewers
+- 30-asset register mapped to LNG equipment categories
+- Compressor condition monitoring (adapted from MetroPT-3 sensor data)
+- Pipeline incident risk analysis (from PHMSA regulatory data)
+- Reliability KPIs: MTTR, MTBF Estimate, Availability Estimate
+- Risk-based maintenance priority matrix
+- Risk-derived engineering recommendations
+- Power BI report with drill-through pages and report-page tooltips
+- Full Excel workbook for non-Python reviewers
 
-Built with: Python (pandas, matplotlib, seaborn), Jupyter, openpyxl
+Built with: Python (pandas, matplotlib, seaborn), Jupyter, openpyxl, Excel,
+Power BI Desktop, Power Query, DAX
 
 Full source and documentation on GitHub:
 https://github.com/sam-1477/lng-operations-reliability-dashboard
@@ -177,7 +186,7 @@ Prepare concise (30–60 second) answers to:
    Name all three datasets, explain why each was chosen, state clearly they're public.
 
 3. **"How did you compute MTBF?"**
-   Explain the formula, explain why it's called "MTBF-estimate" (operating hour limitation),
+   Explain the formula, explain why it's called "MTBF Estimate" (operating hour limitation),
    explain what you'd need to make it accurate.
 
 4. **"What would you do differently with real LNG data?"**
@@ -200,8 +209,17 @@ Capture these screenshots at high resolution (1920x1080 recommended):
 3. **Pipeline Risk** — PHMSA incident root cause bar chart
 4. **Priority Matrix** — 5x5 risk matrix with asset labels
 5. **Reliability KPI Summary** — KPI cards and equipment-category bar chart
+6. **Power BI Executive Overview** — Power BI screenshot showing MTBF Estimate,
+   Availability Estimate, downtime, and bad actors
+7. **Engineering Recommendations** — Power BI page showing risk-derived
+   recommendations and the disclaimer
+8. **Asset Drill-through** — Power BI drill-through page or report-page tooltip
 
 Save in `screenshots/` and reference in README.md as embedded images.
+
+For portfolio delivery, include Power BI screenshots and provide either a PBIX
+file, a PBIT template, or a documented external link if the PBIX is too large for
+GitHub.
 
 ---
 

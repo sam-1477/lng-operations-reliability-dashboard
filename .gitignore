@@ -46,6 +46,9 @@ data/raw/azure_pdm/
 # Reports
 reports/*.pdf
 
+# Local Power BI build history
+archive_pbix_versions/
+
 # Environment
 .env
 .env.local

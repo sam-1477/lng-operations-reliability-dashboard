@@ -1,289 +1,182 @@
-# LNG Operations Technical Reliability Dashboard
+# LNG Reliability Dashboard
 
+[![Power BI](https://img.shields.io/badge/Power%20BI-dashboard-F2C811.svg)](https://powerbi.microsoft.com/)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Important Disclaimer
 
-This project uses **public industrial datasets** adapted into LNG-style
-reliability categories for **portfolio demonstration**.
+This project uses public and simulated industrial reliability-style data adapted
+into LNG maintenance and asset-management categories for portfolio
+demonstration.
 
-It does **not** contain, use, or claim to use ExxonMobil or PNG LNG operating
-data. It does **not** contain confidential, proprietary, or licensee data. It is
-not affiliated with or endorsed by ExxonMobil, PNG LNG, or any LNG operator.
+It does not contain, use, or claim to use ExxonMobil, PNG LNG, or any real plant
+operating data. It does not contain confidential, proprietary, licensee, or
+employer-owned data. It is not affiliated with or endorsed by ExxonMobil, PNG
+LNG, or any LNG operator.
 
-This is an **operations technical reliability dashboard** starter project. It is
-not a live plant dashboard, not an industrial digital twin, and not a formal
-mechanical integrity assessment.
+This dashboard is an engineering analytics portfolio project. It is not a live
+plant dashboard, not a formal safety risk assessment, not a digital twin, and not
+a mechanical integrity approval tool.
 
-## Project Objective
+## Project Summary
 
-Build a clear, honest, GitHub-ready reliability dashboard that demonstrates how
-a graduate Mechanical Engineer can use Python and Excel to inspect public
-industrial datasets, adapt them into LNG-style reliability categories, and
-communicate operations technical insights.
+This project demonstrates how reliability, maintenance, and failure-history data
+can be transformed into a professional Power BI dashboard for asset performance
+review, downtime analysis, bad-actor identification, preventive maintenance
+monitoring, risk prioritization, and engineering recommendations.
 
-The project focuses on:
+The final dashboard is designed for a reliability or maintenance engineering
+review workflow: start with an executive summary, identify the assets and failure
+modes driving downtime, review PM performance, prioritize risk, and drill into
+asset or failure-mode detail before recommending action.
 
-- Asset reliability and maintenance priority
-- Compressor process surveillance
-- LNG and pipeline incident risk awareness
-- Mechanical integrity context
-- Excel dashboard communication for non-Python reviewers
+## Final Dashboard File
 
-## Dashboard Preview
+Open the final Power BI report here:
 
-### Dashboard Preview
+[lng_reliability_dashboard_v0.2_final_darkpolish_v5.pbix](lng_reliability_dashboard_v0.2_final_darkpolish_v5.pbix)
 
-![Dashboard Preview](screenshots/dashboard_preview.png)
+This is the portfolio-ready version. Archived PBIX versions are retained locally
+in `archive_pbix_versions/` and intentionally excluded from the repository.
 
-### KPI Calculations
+## Dashboard Screenshots
 
-![KPI Calculations](screenshots/kpi_calculations.png)
+### Executive Overview
 
-### AI Recommendations
+![Executive Overview](screenshots/01-executive-overview.png)
 
-![AI Recommendations](screenshots/ai_recommendations.png)
+### Downtime and Bad Actors
 
-## Quick Portfolio Summary
+![Downtime and Bad Actors](screenshots/02-downtime-bad-actors.png)
 
-- Uses public industrial datasets adapted into LNG-style reliability categories
-  for an operations technical reliability dashboard.
-- Builds an Azure Predictive Maintenance reliability summary with asset health
-  scores, maintenance priorities, and reliability-style estimates.
-- Uses the MetroPT-3 compressor sample to demonstrate LNG-style compressor
-  process surveillance concepts.
-- Uses PHMSA LNG and Gas Transmission incident data for incident risk awareness,
-  cause review, and mechanical integrity context.
-- Provides an Excel dashboard workbook for quick visual review:
-  [excel/lng_operations_reliability_dashboard.xlsx](excel/lng_operations_reliability_dashboard.xlsx).
-- Remains a portfolio demonstration, not ExxonMobil or PNG LNG operating data,
-  not a live plant dashboard, and not a formal mechanical integrity assessment.
+### Risk and Priority
+
+![Risk and Priority](screenshots/03-risk-priority.png)
+
+### Engineering Recommendations
+
+![Engineering Recommendations](screenshots/04-engineering-recommendations.png)
+
+## Dashboard Pages
+
+- **Executive Overview** - high-level reliability KPIs, monthly downtime trend,
+  availability by equipment category, bad actors, and priority table.
+- **Equipment Performance** - equipment category performance matrix, failure
+  mode distribution, asset-level reliability detail, and monthly failure trends.
+- **Downtime and Bad Actors** - downtime Pareto, risk-ranked bad actors, failure
+  frequency heatmap, and repeat-failure trend.
+- **Failure Modes and Root Causes** - failure mode Pareto, root-cause mechanism
+  distribution, failure mode by equipment category, and failure trend.
+- **PM Performance** - preventive maintenance compliance, overdue worklist,
+  PM status trend, and corrective/preventive ratio.
+- **Risk and Priority** - illustrative risk ranking, priority bands, secondary
+  likelihood/consequence view, and ranked recommendation table.
+- **Engineering Recommendations** - risk-derived recommendation summary,
+  interpretation notes, recommended actions, and asset recommendation table.
+- **Asset Detail** - drill-through page for one asset's reliability profile.
+- **Failure Mode Detail** - drill-through page for affected assets by failure
+  mode.
+
+## Key KPIs
+
+| KPI | Purpose |
+|---|---|
+| MTBF Estimate | Estimated operating days divided by failure count |
+| MTTR | Total repair hours divided by failure count |
+| Availability Estimate | Estimated availability: MTBF / (MTBF + MTTR / 24), using MTBF in days and MTTR in hours |
+| Total Downtime Hours | Total production-impacting downtime in the selected context |
+| Failure Count | Count of recorded failure events |
+| PM Compliance | On-time PMs divided by valid scheduled PMs; the PM schedule is simulated for portfolio demonstration and does not represent confidential or actual LNG operating data |
+| Corrective / Preventive Ratio | Corrective maintenance volume compared with preventive maintenance volume |
+| Risk Score | Illustrative prioritization score for asset review |
+| Priority Level | P1-P4 action grouping based on risk score and reliability indicators |
+
+## Data Model
+
+The dashboard uses a simple star-schema style model:
+
+- `dim_Asset`
+- `dim_Date`
+- `dim_FailureMode`
+- `dim_MaintenanceAction`
+- `fact_Failure`
+- `fact_Maintenance`
+- `fact_PM_Compliance`
+- `Measure_Table`
+
+The processed CSV files are stored in `data/processed/`.
 
 ## How To Review This Project
 
-For a quick recruiter or reviewer pass, open these files in order:
+For a quick portfolio review:
 
-1. [README.md](README.md) - project purpose, screenshots, data sources, and
-   limitations.
-2. [excel/lng_operations_reliability_dashboard.xlsx](excel/lng_operations_reliability_dashboard.xlsx)
-   - Excel dashboard skeleton with KPI cards, starter charts, and assumptions.
-3. [reports/project_progress_summary.md](reports/project_progress_summary.md) -
-   completed work and remaining portfolio steps.
-4. [reports/version_1_release_notes.md](reports/version_1_release_notes.md) -
-   release contents, known limitations, and v0.2 roadmap.
+1. Open `lng_reliability_dashboard_v0.2_final_darkpolish_v5.pbix` in Power BI
+   Desktop.
+2. Review the four screenshots in `screenshots/`.
+3. Use Ctrl + click on the top navigation buttons inside Power BI Desktop.
+4. Test drill-through from asset bars to **Asset Detail**.
+5. Test drill-through from failure mode bars to **Failure Mode Detail**.
+6. Hover over the small `i` markers on KPI cards for KPI definitions.
 
-For a shorter review path, see
-[docs/reviewer_quick_start.md](docs/reviewer_quick_start.md).
+## Public Data And Assumptions
 
-## Why This Project Matters
-
-LNG Operations Technical support requires engineers to understand equipment
-health, rotating equipment behavior, incident trends, maintenance priorities,
-and risk communication. Real plant data is confidential, so this project uses
-public datasets to demonstrate the workflow without misrepresenting the source
-of the data.
-
-The value is in the engineering method:
-
-- Inspect and document data sources
-- Create small GitHub-safe samples
-- Build processed dashboard-ready tables
-- Calculate transparent reliability-style indicators
-- State assumptions and limitations clearly
-- Present results in an Excel workbook suitable for portfolio review
-
-## Public Datasets Used
-
-| Dataset | Public Source | Used For |
-|---|---|---|
-| Microsoft Azure Predictive Maintenance Dataset | Microsoft / Kaggle public dataset | Asset reliability summary, maintenance priority, health score, MTBF-style and availability-style estimates |
-| MetroPT-3 Compressor Dataset | Public compressor dataset from UCI / associated publication | Compressor process surveillance sample, oil temperature, pressure, motor current, and operating signals |
-| PHMSA LNG and Gas Transmission Incident Data | U.S. DOT Pipeline and Hazardous Materials Safety Administration | LNG incident awareness, pipeline incident trends, cause categories, consequence context |
+This repository uses public and simulated datasets to demonstrate engineering
+analytics workflow without exposing real plant data. The values are suitable for
+portfolio demonstration, data-modeling practice, and dashboard storytelling, but
+not for operational decision-making.
 
 See [docs/data_sources.md](docs/data_sources.md) for source details and
 attribution.
-
-## Current Features
-
-- Azure Predictive Maintenance data inspection script
-- Azure dashboard-ready machine reliability summary
-- MetroPT-3 compressor data inspection script
-- MetroPT-3 compressor surveillance planning report
-- PHMSA LNG and Gas Transmission incident inspection script
-- PHMSA dashboard-ready incident risk-awareness summary
-- GitHub-safe sample files for Azure, MetroPT-3, and PHMSA
-- Excel dashboard skeleton at
-  [excel/lng_operations_reliability_dashboard.xlsx](excel/lng_operations_reliability_dashboard.xlsx)
-- Documentation for dashboard data model and Excel design
-- Release notes, progress summary, and dashboard review checklist
 
 ## Repository Structure
 
 ```text
 .
 |-- data/
-|   |-- raw/                 # Local raw public datasets, ignored by Git
 |   |-- processed/           # Dashboard-ready processed CSV files
 |   `-- README.md
-|-- docs/                    # Project design, data model, and presentation docs
-|-- excel/                   # Excel dashboard workbook
-|-- notebooks/               # Reserved for future notebook workflow
-|-- reports/                 # Generated reports and review documents
+|-- docs/                    # Data source notes and project documentation
+|-- excel/                   # Earlier Excel workbook artifact
+|-- notebooks/               # Reserved for notebook workflow
+|-- reports/                 # Supporting reports and release notes
 |-- samples/                 # Small GitHub-safe sample files
-|-- screenshots/             # Dashboard screenshots for portfolio images
+|-- screenshots/             # Power BI portfolio screenshots
 |-- scripts/                 # Reproducible Python scripts
 |-- src/                     # Reserved for reusable Python modules
+|-- lng_reliability_dashboard_v0.2_final_darkpolish_v5.pbix
 |-- README.md
 |-- requirements.txt
 `-- LICENSE
 ```
 
-## How To Run Scripts
-
-From Windows CMD:
-
-```cmd
-cd /d D:\ai-portfolio-projects\lng-reliability-dashboard
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-Run the project scripts:
-
-```cmd
-python scripts\inspect_azure_pdm.py
-python scripts\build_azure_reliability_summary.py
-python scripts\inspect_metropt3_compressor.py
-python scripts\inspect_phmsa_incidents.py
-python scripts\build_excel_dashboard_skeleton.py
-```
-
-The scripts read from processed/sample files or local raw files under
-`data/raw/`. Raw files are not committed to Git.
-
-Raw datasets are intentionally excluded from GitHub. The repository provides
-processed dashboard-ready files in `data/processed/` and GitHub-safe samples in
-`samples/` so reviewers can inspect the project without downloading large raw
-datasets.
-
-## Scripts Created
-
-| Script | Purpose |
-|---|---|
-| `scripts/inspect_azure_pdm.py` | Inspect Azure Predictive Maintenance source files and create profile/sample outputs |
-| `scripts/build_azure_reliability_summary.py` | Build the Azure machine reliability summary for dashboard use |
-| `scripts/inspect_metropt3_compressor.py` | Inspect MetroPT-3 compressor data and create profile/sample outputs |
-| `scripts/inspect_phmsa_incidents.py` | Inspect PHMSA LNG/Gas Transmission incidents and create the incident risk summary |
-| `scripts/build_excel_dashboard_skeleton.py` | Build the Excel dashboard skeleton workbook |
-
-## How To Open The Excel Workbook
-
-Open this file in Microsoft Excel:
-
-```text
-excel/lng_operations_reliability_dashboard.xlsx
-```
-
-The workbook currently includes these sheets:
-
-- `README`
-- `Azure_Reliability_Summary`
-- `PHMSA_Incident_Risk`
-- `MetroPT3_Compressor_Sample`
-- `KPI_Calculations`
-- `Dashboard`
-- `AI_Recommendations`
-- `Assumptions`
-
-The workbook is a dashboard skeleton. It includes KPI cards, starter charts,
-data tables, assumptions, and guidance for manual Excel polish.
-
-## Current Project Status
-
-**Status: v0.1 recruiter-review version complete**
-
-Current release: `v0.1-dashboard-skeleton`
-
-The repository is ready for recruiter review as a graduate Mechanical
-Engineering portfolio project. The Excel dashboard workbook, screenshots,
-processed dashboard-ready data summaries, Python scripts, and supporting
-documentation are available in the repository.
-
-Completed:
-
-- Public datasets downloaded locally and inspected
-- Raw files excluded from Git
-- Processed Azure reliability summary created
-- Processed PHMSA incident risk summary created
-- MetroPT-3 compressor sample created
-- Excel dashboard workbook created and visually polished
-- Dashboard, KPI calculations, and AI recommendations screenshots updated
-- GitHub/CV/LinkedIn presentation docs created
-- Repository pushed to GitHub for controlled recruiter review
-
-Possible v0.2 improvements:
-
-- Add slicers for maintenance priority, LNG equipment category, source dataset,
-  and year.
-- Add additional compressor trend charts for pressure, oil temperature, current,
-  and operating signals.
-- Add workbook QA checks for sheet presence, missing references, and key
-  formatting expectations.
-- Create a more compact executive summary for quick recruiter scanning.
-
 ## Skills Demonstrated
 
-- Python scripting for engineering data workflows
-- `pandas` data cleaning, grouping, and summarization
-- Excel workbook generation with `openpyxl`
-- Reliability-style KPI calculation
-- Maintenance priority ranking
-- Compressor process-surveillance thinking
-- PHMSA incident risk-awareness analysis
-- Dashboard data modeling
-- Technical documentation for GitHub and portfolio review
-- Clear data provenance and assumption management
+- Power BI dashboard design and visual polish
+- Star-schema style reliability data modeling
+- DAX-style KPI thinking and measure organization
+- Drill-through pages and report-page tooltips
+- Reliability and maintenance KPI interpretation
+- Downtime Pareto and bad-actor analysis
+- Failure mode and root-cause analysis
+- Preventive maintenance compliance review
+- Risk prioritization and engineering recommendation framing
+- Python-based data preparation workflow
+- Clear documentation of assumptions, limitations, and data provenance
 
 ## Limitations
 
-- Public datasets are adapted into LNG-style reliability categories.
-- This is not ExxonMobil or PNG LNG operating data.
-- This is not a live plant dashboard.
-- This is not a formal mechanical integrity assessment.
-- Azure MTBF-style, MTTR-style, and availability-style values are estimates for
-  learning and presentation.
-- MetroPT-3 is a public compressor dataset, not LNG plant compressor history.
-- PHMSA data is U.S. public incident data, not PNG LNG operating history.
-- The Excel workbook is a starter dashboard skeleton, not a final production
-  dashboard.
+- The data is public/simulated and adapted for portfolio demonstration.
+- This is not ExxonMobil, PNG LNG, or live LNG operating data.
+- Risk scores and recommendations are illustrative only.
+- The dashboard does not approve maintenance actions or engineering work.
+- All real-world maintenance decisions would require authorized engineering
+  review, validated site data, work management controls, and plant procedures.
 
-See [docs/assumptions_and_limitations.md](docs/assumptions_and_limitations.md)
-for the full honesty document.
+## Possible Future Enhancements
 
-## Screenshot Index
-
-- [Dashboard preview](screenshots/dashboard_preview.png)
-- [KPI calculations](screenshots/kpi_calculations.png)
-- [AI recommendations](screenshots/ai_recommendations.png)
-
-## Next Steps
-
-1. Use the current `v0.1-dashboard-skeleton` release for recruiter review.
-2. Keep raw datasets excluded from GitHub.
-3. For v0.2, consider slicers, additional compressor trend charts, workbook QA
-   checks, and a more compact executive summary.
-4. Continue presenting the workbook as a portfolio demonstration using public
-   datasets, not ExxonMobil or PNG LNG operating data.
-
-## Contact / Portfolio Note
-
-This repository is intended as a mechanical engineering portfolio project for
-LNG Operations Technical, reliability, and maintenance engineering roles. The
-project demonstrates initiative, data analysis, reliability thinking, and honest
-technical communication using public industrial datasets.
-
-## License
-
-MIT - see [LICENSE](LICENSE).
+- Add a short video walkthrough of the Power BI report.
+- Add published Power BI Service screenshots if a public-safe workspace is used.
+- Add more equipment classes and simulated operating context.
+- Add reliability trend commentary by month or quarter.
+- Add export-ready PDF summary pages for non-Power BI reviewers.

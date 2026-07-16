@@ -173,10 +173,8 @@ attribution.
 - All real-world maintenance decisions would require authorized engineering
   review, validated site data, work management controls, and plant procedures.
 
-## Possible Future Enhancements
+## Future Development Opportunities
 
-- Add a short video walkthrough of the Power BI report.
-- Add published Power BI Service screenshots if a public-safe workspace is used.
-- Add more equipment classes and simulated operating context.
-- Add reliability trend commentary by month or quarter.
-- Add export-ready PDF summary pages for non-Power BI reviewers.
+- Deploy the dashboard to Power BI Service with scheduled data refresh.
+- Integrate condition-monitoring trends and predictive risk indicators.
+- Create a short executive video or PDF walkthrough for non-Power BI reviewers.
